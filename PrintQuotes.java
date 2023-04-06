@@ -25,29 +25,4 @@ class PrintQuotes implements CommandLineRunner {
 //		super();
 //		Quotes = quotes;
 //	}
-	@Qualifier("friendship")
-	@Autowired(required=false)
-	public void setQuotes(Quotes quotes) {
-		System.out.println("set course");
-		Quotes = quotes;
-	}
-
-	@PostConstruct
-	public void init() {
-	System.out.println("PostConstruct");
-//	System.out.println(friendship);
-//	System.out.println(hardwork);
-	}
 	
-	@PreDestroy
-	public void beforeDestory() {
-	System.out.println("PreDestory");
-	}
-
-	@Override
-	public void run(String... args) {
-		for (var Course : Quotes.getCourse())
-			System.out.println(Course);
-
-	}
-}
